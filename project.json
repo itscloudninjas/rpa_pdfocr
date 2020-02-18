@@ -3,6 +3,9 @@
   "description": "PDF Reader with OCR",
   "main": "Main.xaml",
   "dependencies": {
+    "Invoice": "[1.0.6]",
+    "PDF_Activities": "[1.0.2]",
+    "UiPath.Abbyy.Activities": "[1.0.1]",
     "UiPath.Excel.Activities": "[2.8.0-preview]",
     "UiPath.Mail.Activities": "[1.8.0-preview]",
     "UiPath.System.Activities": "[19.12.0-preview]",
