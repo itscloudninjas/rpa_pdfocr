@@ -1,0 +1,142 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="TestOCR" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="515.6,702" sap2010:WorkflowViewState.IdRef="TestOCR_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="26">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Abbyy.Core.FlexiCapture</x:String>
+      <x:String>UiPath.Abbyy.Core.FlexiCapture.Enums</x:String>
+      <x:String>UiPath.Abbyy.Core.FlexiCapture.ValidationStationAdapters</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="19">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Abbyy.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="TestOCR" sap:VirtualizedContainerService.HintSize="495.6,642" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap2010:Annotation.AnnotationText="This service opens the scanned PDF file and read scanned elements using OCR" DisplayName="Main PDF OCR process" sap:VirtualizedContainerService.HintSize="453.6,550" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="s:String[]" Name="fileList" />
+        <Variable x:TypeArguments="x:String" Name="varProgramNm" />
+        <Variable x:TypeArguments="x:String" Name="varCompanyName" />
+        <Variable x:TypeArguments="scg:IEnumerable(ui:TextInfo)" Name="ocrInvLineItems" />
+        <Variable x:TypeArguments="s:String[]" Name="InvoiceLineData" />
+        <Variable x:TypeArguments="x:Int32" Name="i" />
+        <Variable x:TypeArguments="x:String" Name="varShipping" />
+        <Variable x:TypeArguments="x:String" Name="varInvoiceNum" />
+        <Variable x:TypeArguments="x:String" Name="varInvPage" />
+        <Variable x:TypeArguments="x:String" Name="varInvDate" />
+        <Variable x:TypeArguments="x:String" Name="varShipType" />
+        <Variable x:TypeArguments="x:String" Name="varPono" />
+        <Variable x:TypeArguments="x:String" Name="varSLSM" />
+        <Variable x:TypeArguments="x:String" Name="varTrip" />
+        <Variable x:TypeArguments="x:String" Name="varRoute" />
+        <Variable x:TypeArguments="x:String" Name="varStop" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="411.6,59.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="s:String[]">[fileList]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("C:\ProcessInvoice\FDA_RUS", "*.pdf")]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="411.6,313.6" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[fileList]">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="pdfFile" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,179.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="variable1" />
+                <Variable x:TypeArguments="x:Int32" Name="pdfPages" />
+                <Variable x:TypeArguments="sd:DataTable" Name="InvHeaderDT" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke RussDevisDataOCRScrap workflow" sap:VirtualizedContainerService.HintSize="334,87.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="RussDevisDataOCRScrap.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <OutArgument x:TypeArguments="x:String" x:Key="ShipType" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="ShipCompany" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="PONO" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="PageNumber" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="InvoiceNumber" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="SLSM" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="InvoiceDate" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="TripDetails" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="RouteDetails" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="StopDetails" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="TotalCases" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="ShippingWeight" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="InvoiceTotalAmount" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="CustomerId" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="CustomerName" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="CustAddressLine1" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="CustAddressLine2" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="CustCity" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="CustState" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="CustZip" />
+                  <InArgument x:TypeArguments="x:String" x:Key="pdfFile">[pdfFile.ToString]</InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+      </ui:ForEach>
+    </Sequence>
+  </Sequence>
+</Activity>

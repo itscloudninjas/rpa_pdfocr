@@ -1,12 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:id="clr-namespace:Invoice.dataTables;assembly=Invoice" xmlns:iu="clr-namespace:Invoice.utils;assembly=Invoice" xmlns:iw="clr-namespace:Invoice.worksheet;assembly=Invoice" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PDF;assembly=pdfLibrary" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <x:Members>
-    <x:Property Name="processFileName" Type="InArgument(x:String)" />
-  </x:Members>
-  <mva:VisualBasic.Settings>
-    <x:Null />
-  </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>623.6,1782</sap:VirtualizedContainerService.HintSize>
-  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="623.6,1787.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:id="clr-namespace:Invoice.dataTables;assembly=Invoice" xmlns:iu="clr-namespace:Invoice.utils;assembly=Invoice" xmlns:iw="clr-namespace:Invoice.worksheet;assembly=Invoice" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PDF;assembly=pdfLibrary" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
       <x:String>System.Activities</x:String>
@@ -67,7 +59,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="This service opens the scanned PDF file and read scanned elements using OCR" DisplayName="Main PDF OCR process" sap:VirtualizedContainerService.HintSize="603.6,1722" sap2010:WorkflowViewState.IdRef="Sequence_17">
+  <Sequence sap2010:Annotation.AnnotationText="This service opens the scanned PDF file and read scanned elements using OCR" DisplayName="Main PDF OCR process" sap:VirtualizedContainerService.HintSize="603.6,1727.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="fileList" />
       <Variable x:TypeArguments="x:String" Name="varProgramNm" />
@@ -97,7 +89,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Get All Project Assets" sap:VirtualizedContainerService.HintSize="561.6,68" sap2010:WorkflowViewState.IdRef="Sequence_18">
+    <Sequence DisplayName="Get All Project Assets" sap:VirtualizedContainerService.HintSize="561.6,68.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -125,21 +117,21 @@
         </ui:GetRobotAsset.Value>
       </ui:GetRobotAsset>
     </Sequence>
-    <Assign sap:VirtualizedContainerService.HintSize="561.6,59.2" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap:VirtualizedContainerService.HintSize="561.6,59.6" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="s:String[]">[fileList]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles( processFileName, "*.pdf")]</InArgument>
+        <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles( assetPDFFileLocation, "*.pdf")]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="561.6,1394.8" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[fileList]">
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="561.6,1398.4" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[fileList]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="pdfFile" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,1261.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,1264" sap2010:WorkflowViewState.IdRef="Sequence_16">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="variable1" />
               <Variable x:TypeArguments="x:Int32" Name="pdfPages" />
@@ -156,7 +148,7 @@
             <id:getInvoiceLineData sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="getInvoiceLineData_1" InvLineDT="[InvLineDT]" />
             <p:GetPages DisplayName="Get pages" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="GetPages_1" PDF_FilePath="[pdfFile.ToString]" Pages="[pdfPages]" />
             <iu:getNowDateTimeStamp sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="getNowDateTimeStamp_1" nowTimestamp="[nowTimeStamp]" />
-            <Assign sap:VirtualizedContainerService.HintSize="484,59.2" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign sap:VirtualizedContainerService.HintSize="484,59.6" sap2010:WorkflowViewState.IdRef="Assign_4">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[workSheetFilePath]</OutArgument>
               </Assign.To>
@@ -164,8 +156,8 @@
                 <InArgument x:TypeArguments="x:String">[workSheetFile+"\RusExcel_" +nowTimeStamp.ToString +".xlsx"]</InArgument>
               </Assign.Value>
             </Assign>
-            <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="484,822" sap2010:WorkflowViewState.IdRef="DoWhile_1" Condition="[i &lt; pdfPages]">
-              <Sequence sap:VirtualizedContainerService.HintSize="376,659.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="484,824.4" sap2010:WorkflowViewState.IdRef="DoWhile_1" Condition="[i &lt; pdfPages]">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,660.4" sap2010:WorkflowViewState.IdRef="Sequence_15">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="outputDT" />
                 </Sequence.Variables>
@@ -201,10 +193,10 @@
                 </ui:InvokeWorkflowFile>
                 <id:addInvoiceHeaderRow CustomerAddLine1="{x:Null}" CustomerAddLine2="{x:Null}" CustomerCity="{x:Null}" CustomerId="{x:Null}" CustomerName="{x:Null}" CustomerState="{x:Null}" CustomerZip="{x:Null}" InvoiceDueDate="{x:Null}" ShippingWeight="{x:Null}" SubCases="{x:Null}" TotalCases="{x:Null}" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="addInvoiceHeaderRow_1" InvCompanyName="[varCompanyName]" InvHeaderDT="[InvHeaderDT]" InvoicPageNumber="[varInvPage]" InvoiceDate="[varInvDate]" InvoiceNumber="[varInvoiceNum]" Route="[varRoute]" ShippingMethod="[varShipType]" StopNumber="[varStop]" TotalAmount="0.00" Trips="[varTrip]" varPONO="[varPono]" />
                 <id:addInvoiceLineRow ItemDescription="{x:Null}" ItemNumber="{x:Null}" OriginLocation="{x:Null}" Quantity="{x:Null}" Retail="{x:Null}" package="{x:Null}" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="addInvoiceLineRow_1" InvLineDT="[InvLineDT]" InvoicPageNumber="[varInvPage]" InvoiceNumber="[varInvoiceNum]" PCNT="0.00" UPC="0.00" UntiPrice="0.00" />
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;WorkSheet File Location : &quot; + workSheetFilePath]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;WorkSheet File Location : &quot; + workSheetFilePath]" />
                 <iw:appendDataTableTo worksheetFileName="{x:Null}" FileName="[workSheetFilePath]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="appendDataTableTo_1" InputDataTable="[InvHeaderDT]" SheetName="[InvHeaderStName]" />
                 <iw:appendDataTableTo worksheetFileName="{x:Null}" DisplayName="appendDataTableTo &quot;Line DT&quot;" FileName="[workSheetFilePath]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="appendDataTableTo_2" InputDataTable="[InvLineDT]" SheetName="[InvDetailSheetName]" />
-                <Assign sap:VirtualizedContainerService.HintSize="334,59.2" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign sap:VirtualizedContainerService.HintSize="334,59.6" sap2010:WorkflowViewState.IdRef="Assign_3">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[i]</OutArgument>
                   </Assign.To>

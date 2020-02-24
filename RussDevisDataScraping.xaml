@@ -24,10 +24,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>658,3635</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>657.6,4680.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>RussDevisDataScraping_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="25">
+    <scg:List x:TypeArguments="x:String" Capacity="50">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -53,6 +53,7 @@
       <x:String>UiPath.Abbyy.Core.FlexiCapture.Enums</x:String>
       <x:String>UiPath.Abbyy.Core.FlexiCapture.ValidationStationAdapters</x:String>
       <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -77,15 +78,16 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="RussDevisDataScraping" sap:VirtualizedContainerService.HintSize="638,3535" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="RussDevisDataScraping" sap:VirtualizedContainerService.HintSize="637.6,4620.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Screen Scraping" sap:VirtualizedContainerService.HintSize="596,3443" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="Screen Scraping" sap:VirtualizedContainerService.HintSize="595.6,3990.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <Sequence.Variables>
         <Variable x:TypeArguments="ui:GenericValue" Name="AvlAvview" />
         <Variable x:TypeArguments="x:String" Name="varPageNumber" />
@@ -97,27 +99,27 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'TempPDFFi Acrobatsd'" sap:VirtualizedContainerService.HintSize="554,3351" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="0b2d74f164e67e029fa346f18630dde4" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='*.pdf - Adobe Acrobat Reader DC' /&gt;">
+      <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'TempPDFFi Acrobatsd'" sap:VirtualizedContainerService.HintSize="553.6,3898.8" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="0b2d74f164e67e029fa346f18630dde4" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='*.pdf - Adobe Acrobat Reader DC' /&gt;">
         <ui:WindowScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,3205" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="519.6,3752.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Invoice Details" sap:VirtualizedContainerService.HintSize="478,3113" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence DisplayName="Invoice Details" sap:VirtualizedContainerService.HintSize="477.6,3452.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,338" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.6,337.6" sap2010:WorkflowViewState.IdRef="CommentOut_6">
                   <ui:CommentOut.Body>
-                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_10">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -163,7 +165,7 @@
                     </Sequence>
                   </ui:CommentOut.Body>
                 </ui:CommentOut>
-                <ui:GetOCRText WordsInfo="{x:Null}" ContinueOnError="True" DisplayName="Get OCR Text 'Shipping Method'" sap:VirtualizedContainerService.HintSize="436,168" sap2010:WorkflowViewState.IdRef="GetOCRText_3">
+                <ui:GetOCRText WordsInfo="{x:Null}" ContinueOnError="True" DisplayName="Get OCR Text 'Shipping Method'" sap:VirtualizedContainerService.HintSize="435.6,168" sap2010:WorkflowViewState.IdRef="GetOCRText_3">
                   <ui:GetOCRText.OCREngine>
                     <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
                       <ActivityFunc.Argument>
@@ -184,7 +186,7 @@
                     </ActivityFunc>
                   </ui:GetOCRText.OCREngine>
                   <ui:GetOCRText.Target>
-                    <ui:Target Element="{x:Null}" InformativeScreenshot="4b0260cfd33fab89a68d063c355ba08d" Selector="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;">
+                    <ui:Target Element="{x:Null}" InformativeScreenshot="4b0260cfd33fab89a68d063c355ba08d" Selector="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='*' title='*' /&gt;">
                       <ui:Target.ClippingRegion>
                         <ui:Region Rectangle="394, 208, 311, 11" />
                       </ui:Target.ClippingRegion>
@@ -200,7 +202,7 @@
                     <OutArgument x:TypeArguments="ui:GenericValue">[AvlAvview]</OutArgument>
                   </ui:GetOCRText.Text>
                 </ui:GetOCRText>
-                <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'PONO'" sap:VirtualizedContainerService.HintSize="436,168" sap2010:WorkflowViewState.IdRef="GetOCRText_5">
+                <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'PONO'" sap:VirtualizedContainerService.HintSize="435.6,168" sap2010:WorkflowViewState.IdRef="GetOCRText_5">
                   <ui:GetOCRText.OCREngine>
                     <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
                       <ActivityFunc.Argument>
@@ -221,9 +223,9 @@
                     </ActivityFunc>
                   </ui:GetOCRText.OCREngine>
                   <ui:GetOCRText.Target>
-                    <ui:Target Element="{x:Null}" InformativeScreenshot="93a729e594bcd388f34ed6b4945ec8ca" Selector="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;">
+                    <ui:Target Element="{x:Null}" InformativeScreenshot="064e1ee1c00992f95775e9b3087896cb" Selector="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='*' title='*' /&gt;">
                       <ui:Target.ClippingRegion>
-                        <ui:Region Rectangle="721, 208, 75, 10" />
+                        <ui:Region Rectangle="894, 310, 68, 13" />
                       </ui:Target.ClippingRegion>
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
@@ -237,7 +239,7 @@
                     <OutArgument x:TypeArguments="ui:GenericValue">[AvlAvview]</OutArgument>
                   </ui:GetOCRText.Text>
                 </ui:GetOCRText>
-                <ui:GetOCRText WordsInfo="{x:Null}" ContinueOnError="True" DisplayName="Get OCR Text 'Page Number'" sap:VirtualizedContainerService.HintSize="436,168" sap2010:WorkflowViewState.IdRef="GetOCRText_1">
+                <ui:GetOCRText WordsInfo="{x:Null}" ContinueOnError="True" DisplayName="Get OCR Text 'Page Number'" sap:VirtualizedContainerService.HintSize="435.6,168" sap2010:WorkflowViewState.IdRef="GetOCRText_1">
                   <ui:GetOCRText.OCREngine>
                     <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
                       <ActivityFunc.Argument>
@@ -258,7 +260,7 @@
                     </ActivityFunc>
                   </ui:GetOCRText.OCREngine>
                   <ui:GetOCRText.Target>
-                    <ui:Target Element="{x:Null}" InformativeScreenshot="f9ec66caa605d103b243562d8949ef71" Selector="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;">
+                    <ui:Target Element="{x:Null}" InformativeScreenshot="f9ec66caa605d103b243562d8949ef71" Selector="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='*' title='*' /&gt;">
                       <ui:Target.ClippingRegion>
                         <ui:Region Rectangle="809, 208, 124, 11" />
                       </ui:Target.ClippingRegion>
@@ -274,44 +276,55 @@
                     <OutArgument x:TypeArguments="ui:GenericValue">[AvlAvview]</OutArgument>
                   </ui:GetOCRText.Text>
                 </ui:GetOCRText>
-                <ui:GetOCRText WordsInfo="{x:Null}" ContinueOnError="True" DisplayName="Get OCR Text 'Invoice Number'" sap:VirtualizedContainerService.HintSize="436,168" sap2010:WorkflowViewState.IdRef="GetOCRText_2">
-                  <ui:GetOCRText.OCREngine>
-                    <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
-                      <ActivityFunc.Argument>
-                        <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
-                      </ActivityFunc.Argument>
-                      <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_2" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="4" Text="[InvoiceNumber]">
-                        <ui:GoogleOCR.AllowedCharacters>
-                          <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" Value="" />
-                          </InArgument>
-                        </ui:GoogleOCR.AllowedCharacters>
-                        <ui:GoogleOCR.DeniedCharacters>
-                          <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" Value="" />
-                          </InArgument>
-                        </ui:GoogleOCR.DeniedCharacters>
-                      </ui:GoogleOCR>
-                    </ActivityFunc>
-                  </ui:GetOCRText.OCREngine>
-                  <ui:GetOCRText.Target>
-                    <ui:Target Element="{x:Null}" InformativeScreenshot="567f905418576b056452ba8469404380" Selector="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;">
-                      <ui:Target.ClippingRegion>
-                        <ui:Region Rectangle="393, 229, 66, 14" />
-                      </ui:Target.ClippingRegion>
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                      <ui:Target.WaitForReady>
-                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                      </ui:Target.WaitForReady>
-                    </ui:Target>
-                  </ui:GetOCRText.Target>
-                  <ui:GetOCRText.Text>
-                    <OutArgument x:TypeArguments="ui:GenericValue">[AvlAvview]</OutArgument>
-                  </ui:GetOCRText.Text>
-                </ui:GetOCRText>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,338" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.6,337.6" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:GetOCRText WordsInfo="{x:Null}" ContinueOnError="True" DisplayName="Get OCR Text 'Invoice Number'" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetOCRText_2">
+                        <ui:GetOCRText.OCREngine>
+                          <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                            <ActivityFunc.Argument>
+                              <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                            </ActivityFunc.Argument>
+                            <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_2" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="4" Text="[InvoiceNumber]">
+                              <ui:GoogleOCR.AllowedCharacters>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </ui:GoogleOCR.AllowedCharacters>
+                              <ui:GoogleOCR.DeniedCharacters>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </ui:GoogleOCR.DeniedCharacters>
+                            </ui:GoogleOCR>
+                          </ActivityFunc>
+                        </ui:GetOCRText.OCREngine>
+                        <ui:GetOCRText.Target>
+                          <ui:Target Element="{x:Null}" InformativeScreenshot="567f905418576b056452ba8469404380" Selector="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='*' title='*' /&gt;">
+                            <ui:Target.ClippingRegion>
+                              <ui:Region Rectangle="393, 229, 66, 14" />
+                            </ui:Target.ClippingRegion>
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:GetOCRText.Target>
+                        <ui:GetOCRText.Text>
+                          <OutArgument x:TypeArguments="ui:GenericValue">[AvlAvview]</OutArgument>
+                        </ui:GetOCRText.Text>
+                      </ui:GetOCRText>
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                </ui:CommentOut>
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.6,337.6" sap2010:WorkflowViewState.IdRef="CommentOut_4">
                   <ui:CommentOut.Body>
                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_8">
                       <sap:WorkflowViewStateService.ViewState>
@@ -359,44 +372,55 @@
                     </Sequence>
                   </ui:CommentOut.Body>
                 </ui:CommentOut>
-                <ui:GetOCRText WordsInfo="{x:Null}" ContinueOnError="True" DisplayName="Get OCR Text 'Invoice Date'" sap:VirtualizedContainerService.HintSize="436,168" sap2010:WorkflowViewState.IdRef="GetOCRText_7">
-                  <ui:GetOCRText.OCREngine>
-                    <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
-                      <ActivityFunc.Argument>
-                        <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
-                      </ActivityFunc.Argument>
-                      <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_7" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="4" Text="[InvoiceDate]">
-                        <ui:GoogleOCR.AllowedCharacters>
-                          <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" Value="" />
-                          </InArgument>
-                        </ui:GoogleOCR.AllowedCharacters>
-                        <ui:GoogleOCR.DeniedCharacters>
-                          <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" Value="" />
-                          </InArgument>
-                        </ui:GoogleOCR.DeniedCharacters>
-                      </ui:GoogleOCR>
-                    </ActivityFunc>
-                  </ui:GetOCRText.OCREngine>
-                  <ui:GetOCRText.Target>
-                    <ui:Target Element="{x:Null}" InformativeScreenshot="9bfed4ef76a058de8db57640d23f6c29" Selector="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;">
-                      <ui:Target.ClippingRegion>
-                        <ui:Region Rectangle="542, 190, 66, 14" />
-                      </ui:Target.ClippingRegion>
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                      <ui:Target.WaitForReady>
-                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                      </ui:Target.WaitForReady>
-                    </ui:Target>
-                  </ui:GetOCRText.Target>
-                  <ui:GetOCRText.Text>
-                    <OutArgument x:TypeArguments="ui:GenericValue">[AvlAvview]</OutArgument>
-                  </ui:GetOCRText.Text>
-                </ui:GetOCRText>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,338" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.6,337.6" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:GetOCRText WordsInfo="{x:Null}" ContinueOnError="True" DisplayName="Get OCR Text 'Invoice Date'" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetOCRText_7">
+                        <ui:GetOCRText.OCREngine>
+                          <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                            <ActivityFunc.Argument>
+                              <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                            </ActivityFunc.Argument>
+                            <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_7" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="4" Text="[InvoiceDate]">
+                              <ui:GoogleOCR.AllowedCharacters>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </ui:GoogleOCR.AllowedCharacters>
+                              <ui:GoogleOCR.DeniedCharacters>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </ui:GoogleOCR.DeniedCharacters>
+                            </ui:GoogleOCR>
+                          </ActivityFunc>
+                        </ui:GetOCRText.OCREngine>
+                        <ui:GetOCRText.Target>
+                          <ui:Target Element="{x:Null}" InformativeScreenshot="9bfed4ef76a058de8db57640d23f6c29" Selector="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='*' title='*' /&gt;">
+                            <ui:Target.ClippingRegion>
+                              <ui:Region Rectangle="542, 190, 66, 14" />
+                            </ui:Target.ClippingRegion>
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:GetOCRText.Target>
+                        <ui:GetOCRText.Text>
+                          <OutArgument x:TypeArguments="ui:GenericValue">[AvlAvview]</OutArgument>
+                        </ui:GetOCRText.Text>
+                      </ui:GetOCRText>
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                </ui:CommentOut>
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.6,337.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                   <ui:CommentOut.Body>
                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_5">
                       <sap:WorkflowViewStateService.ViewState>
@@ -444,7 +468,7 @@
                     </Sequence>
                   </ui:CommentOut.Body>
                 </ui:CommentOut>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,338" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.6,337.6" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                   <ui:CommentOut.Body>
                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_7">
                       <sap:WorkflowViewStateService.ViewState>
@@ -492,7 +516,7 @@
                     </Sequence>
                   </ui:CommentOut.Body>
                 </ui:CommentOut>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,338" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.6,337.6" sap2010:WorkflowViewState.IdRef="CommentOut_5">
                   <ui:CommentOut.Body>
                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_9">
                       <sap:WorkflowViewStateService.ViewState>
@@ -540,8 +564,60 @@
                     </Sequence>
                   </ui:CommentOut.Body>
                 </ui:CommentOut>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;  ------------------------ INVOICE DETAILS-------------------&quot; + Environment.NewLine +&#xA;&quot;Shipping Company Name : &quot; + ShipCompany + Environment.NewLine +&#xA;&quot; Shipping Method : &quot; + ShipType + Environment.NewLine +&#xA;&quot;P.O.N.O : &quot; + PONO + Environment.NewLine +&#xA;&quot;Page Number : &quot; + PageNumber + Environment.NewLine +&#xA;&quot;Invoice Number : &quot; + InvoiceNumber + Environment.NewLine +&#xA;&quot; SLSM : &quot; + SLSM + Environment.NewLine +&#xA;&quot;Invoice Date : &quot; + InvoiceDate + Environment.NewLine +&#xA;&quot;Trip Details: &quot; + TripDetails + Environment.NewLine +&#xA;&quot; Route Details: &quot; + RouteDetails + Environment.NewLine +&#xA;&quot; Stop Details : &quot; + StopDetails + Environment.NewLine]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="435.6,93.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;  ------------------------ INVOICE DETAILS-------------------&quot; + Environment.NewLine +&#xA;&quot;Shipping Company Name : &quot; + ShipCompany + Environment.NewLine +&#xA;&quot; Shipping Method : &quot; + ShipType + Environment.NewLine +&#xA;&quot;P.O.N.O : &quot; + PONO + Environment.NewLine +&#xA;&quot;Page Number : &quot; + PageNumber + Environment.NewLine +&#xA;&quot;Invoice Number : &quot; + InvoiceNumber + Environment.NewLine +&#xA;&quot; SLSM : &quot; + SLSM + Environment.NewLine +&#xA;&quot;Invoice Date : &quot; + InvoiceDate + Environment.NewLine +&#xA;&quot;Trip Details: &quot; + TripDetails + Environment.NewLine +&#xA;&quot; Route Details: &quot; + RouteDetails + Environment.NewLine +&#xA;&quot; Stop Details : &quot; + StopDetails + Environment.NewLine]" />
               </Sequence>
+            </Sequence>
+          </ActivityAction>
+        </ui:WindowScope.Body>
+      </ui:WindowScope>
+    </Sequence>
+    <Sequence DisplayName="Screen Scraping" sap:VirtualizedContainerService.HintSize="595.6,498" sap2010:WorkflowViewState.IdRef="Sequence_14">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="ui:GenericValue" Name="AvlAvview" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'TempPDFFi Acrobatsd'" sap:VirtualizedContainerService.HintSize="434,406" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="5ad9426da5b768e002742b1df09b9586" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='tempPDFFile.pdf - Adobe Acrobat Reader DC' /&gt;">
+        <ui:WindowScope.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'AVL_AVView'" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetOCRText_12">
+                <ui:GetOCRText.OCREngine>
+                  <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                    <ActivityFunc.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                    </ActivityFunc.Argument>
+                    <ui:MicrosoftOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Microsoft OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_2" Image="[Image]" Language="English (United States)" Profile="Screen" Scale="1" />
+                  </ActivityFunc>
+                </ui:GetOCRText.OCREngine>
+                <ui:GetOCRText.Target>
+                  <ui:Target Element="{x:Null}" InformativeScreenshot="057a3d210c4589b408a166a1a79d2e1c" Selector="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;">
+                    <ui:Target.ClippingRegion>
+                      <ui:Region Rectangle="609, 337, 61, 11" />
+                    </ui:Target.ClippingRegion>
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetOCRText.Target>
+                <ui:GetOCRText.Text>
+                  <OutArgument x:TypeArguments="ui:GenericValue">[AvlAvview]</OutArgument>
+                </ui:GetOCRText.Text>
+              </ui:GetOCRText>
             </Sequence>
           </ActivityAction>
         </ui:WindowScope.Body>
